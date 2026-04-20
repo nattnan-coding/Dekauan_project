@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เด็กอ้วน (DekAuan) | ขนมทอดกรอบพรีเมียม ใช้น้ำมันดอกทานตะวัน 100%</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-gold: #F2A900;
+            --warm-amber: #D4780B;
+            --health-green: #7CB342;
+            --bg-cream: #FFF8F0;
+            --text-charcoal: #3E2723;
+            --cta-orange: #E64A19;
+        }
+
+        body { font-family: 'Kanit', sans-serif; background-color: var(--bg-cream); color: var(--text-charcoal); scroll-behavior: smooth; }
+
+        .brand-title { color: white; -webkit-text-stroke: 2px #000; filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.3)); font-weight: 800; }
+        .hero-subheadline { color: #F2A900; text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+        .hero-bg { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('bg-hero.png'); background-size: cover; background-position: center; }
+        
+        .nav-glass { background: rgba(255, 248, 240, 0.95); backdrop-filter: blur(10px); border-bottom: 3px solid var(--primary-gold); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        
+        .blog-card { background: white; border-radius: 24px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 8px solid var(--health-green); line-height: 1.8; }
+        
+        .bubble-tag {
+            position: absolute; top: -10px; right: -10px; padding: 8px 15px; border-radius: 50px;
+            font-weight: 800; color: white; z-index: 10; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+        .flavor-btn { width: 50px; height: 50px; transition: all 0.2s; border-radius: 50%; border: 2px solid transparent; cursor: pointer; }
+        .flavor-btn:hover { transform: scale(1.1); border-color: var(--primary-gold); }
+        .flavor-label { font-size: 0.7rem; font-weight: 600; margin-top: 4px; color: var(--text-charcoal); }
+
+        .menu-card { background: white; border-radius: 30px; overflow: hidden; border: 1px solid #eee; transition: all 0.3s; }
+        .menu-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        
+        .pulse-btn { animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 70% { transform: scale(1.05); } 100% { transform: scale(1); } }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 nav-glass py-4 px-6 md:px-12 flex justify-between items-center shadow-lg">
+        <div class="flex items-center gap-2 text-2xl font-black text-[#E64A19]">DEKAUAN</div>
+        <div class="hidden md:flex gap-8 font-semibold text-sm">
+            <a href="#home" class="hover:text-[#D4780B]">หน้าแรก</a>
+            <a href="#about" class="hover:text-[#D4780B]">เกี่ยวกับเรา</a>
+            <a href="#articles" class="hover:text-[#D4780B]">น้ำมันดอกทานตะวัน</a>
+            <a href="#menu" class="hover:text-[#D4780B]">เมนู</a>
+            <a href="#contact" class="hover:text-[#D4780B]">ติดต่อเรา</a>
+        </div>
+        <a href="https://line.me/R/ti/p/@dekauan.official" target="_blank" class="bg-[#E64A19] text-white px-6 py-2 rounded-full font-bold shadow-md">สั่งซื้อทาง LINE</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen hero-bg flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl">
+            <h1 class="text-7xl md:text-9xl brand-title mb-4">เด็กอ้วน</h1>
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-8 hero-subheadline">ความกรอบที่คัดสรรมาเพื่อคุณ</h2>
+            <div class="bg-white/90 p-4 rounded-xl inline-block border-l-8 border-[#7CB342] shadow-xl">
+                <p class="text-[#3E2723] text-lg md:text-xl font-bold italic">"ใช้น้ำมันดอกทานตะวัน 100% สุขภาพดีขึ้นทุกคำที่กัด"</p>
+            </div>
+            <div class="mt-12">
+                <a href="#menu" class="bg-[#F2A900] text-[#3E2723] text-xl px-12 py-5 rounded-full font-black shadow-2xl pulse-btn inline-block">เลือกเมนูความอร่อย <i class="fas fa-arrow-down ml-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-black text-[#3E2723] mb-12">เกี่ยวกับเรา</h2>
+        <div class="max-w-4xl mx-auto bg-white p-10 md:p-16 rounded-[40px] shadow-2xl border-b-[12px] border-[#F2A900] fade-in">
+            <p class="text-2xl md:text-3xl font-bold text-[#3E2723] leading-relaxed">
+                "ขนมทอดกรอบอร่อยคุณภาพดี ไม่อมน้ำมัน คัดสรรทอดด้วยน้ำมันดอกทานตะวัน กินเพลิน ทานง่าย อร่อยได้ทุกวัน ซึ่งคำนึงถึงสุขภาพของผู้บริโภคเป็นอย่างแรก"
+            </p>
+        </div>
+    </section>
+
+    <!-- Why Sunflower Oil Articles -->
+    <section id="articles" class="py-24 bg-white shadow-inner">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="text-4xl font-black text-center mb-16 underline decoration-[#F2A900]">ทำไมต้อง <span class="text-[#7CB342]">น้ำมันดอกทานตะวัน?</span></h2>
+            <div class="grid gap-10">
+                <article class="blog-card fade-in">
+                    <h3 class="text-2xl font-bold mb-4 text-[#D4780B]">ความใส่ใจของ "เด็กอ้วน" (Dekauan)</h3>
+                    <p class="text-lg text-gray-700">เราเลือกใช้ ‘น้ำมันดอกทานตะวัน’ เพราะนี่คือทางเลือกเพื่อสุขภาพที่มอบทั้งความอร่อยและความปลอดภัย ด้วยปริมาณกรดไขมันไม่อิ่มตัวสูงและมีไขมันอิ่มตัวต่ำ ช่วยลดความเสี่ยงการสะสมคอเลสเตอรอล และอุดมด้วยวิตามินอีธรรมชาติ</p>
+                </article>
+                <article class="blog-card fade-in" style="border-top-color: #D4780B;">
+                    <h3 class="text-2xl font-bold mb-4 text-[#7CB342]">ประโยชน์ของน้ำมันดอกทานตะวัน</h3>
+                    <p class="text-lg text-gray-700">น้ำมันดอกทานตะวันมีจุดเกิดควันที่ค่อนข้างสูง จึงทำให้มีความเสถียรทางเคมีสูงในขณะปรุงอาหาร ช่วยลดความเสี่ยงในการเกิดสารประกอบที่เป็นอันตรายต่อร่างกายจากการสลายตัวของน้ำมัน ส่งผลให้ขนมของเรากรอบนานและสะอาด</p>
+                </article>
+                <article class="blog-card fade-in">
+                    <h3 class="text-2xl font-bold mb-4 text-[#D4780B]">“เด็กอ้วน” (Dekauan) ความอร่อยที่แบ่งปันได้ไม่รู้จบคุณเสมอ</h3>
+                    <p class="text-lg text-gray-700">เราเชื่อว่าความอร่อยจะทวีคูณเมื่อได้กินพร้อมหน้ากัน ขนมทุกถุงของ "เด็กอ้วน" จึงถูกออกแบบมาให้มีปริมาณที่ "เยอะและคุ้มค่า" สามารถกินในปาร์ตี้หรือจะกินคนเดียวเพลินๆ ก็ได้</p>
+                </article>
+                <article class="blog-card fade-in" style="border-top-color: #D4780B;">
+                    <h3 class="text-2xl font-bold mb-4 text-[#7CB342]">“เด็กอ้วน" ความอร่อยในทุกไลฟ์สไตล์ </h3>
+                    <p class="text-lg text-gray-700">เราเป็นเพื่อนคู่คิดของวัยทำงาน เพราะเราเข้าใจชีวิตคนวัยทำงาน แบรนด์เด็กอ้วนจึงดีไซน์มาให้ตอบโจทย์ทั้งความสะดวก ทั้งใส่ใจเรื่องสุขภาพ และความคุ้มค่าที่ช่วยให้วันวุ่นๆ ของคุณง่ายขึ้น นอกจากจะเป็นเพื่อนคู่ใจคนวัยทำงานแล้ว เด็กอ้วน ยังเป็นเพื่อนซี้สุดซี้ดของ “กลุ่มวัยรุ่น” ที่ไม่ชอบความจำเจ! เราอยากให้คุณสนุกกับการกินขนมมากกว่าที่เคย เพราะขนมถังของเราไม่ได้มีดีแค่กินเปล่าๆ แต่คือ “วัตถุดิบชั้นยอด” ที่พร้อมให้คุณไปทดลองทำเมนูใหม่ๆ ได้ไม่รู้จบ<p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-24 container mx-auto px-6">
+        <h2 class="text-4xl font-black text-center mb-16 text-[#3E2723]">เมนูแนะนำ</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-6xl mx-auto mb-20">
+            <!-- ไส้กรอกแดง (Best Seller) -->
+            <div class="menu-card relative fade-in">
+                <div class="bubble-tag bg-red-600">เมนูขายดีตลอดกาล</div>
+                <div class="aspect-video bg-[#FDF2E9] flex items-center justify-center p-6">
+                    <img src="pck-sausage.png" alt="ไส้กรอกแดง" class="h-full object-contain">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-3xl font-black mb-4">ไส้กรอกแดงทอดกรอบ</h3>
+                    <p class="text-xs font-bold mb-3 text-gray-400 uppercase tracking-widest italic">เลือกใส่รสชาติ:</p>
+                    <div class="flex gap-4 flex-wrap mb-8">
+                        <div class="text-center"><img src="fla-ori.png" class="flavor-btn"><p class="flavor-label">ดั้งเดิม</p></div>
+                        <div class="text-center"><img src="fla-sw.png" class="flavor-btn"><p class="flavor-label">สาหร่าย</p></div>
+                        <div class="text-center"><img src="fla-cheese.png" class="flavor-btn"><p class="flavor-label">ชีส</p></div>
+                        <div class="text-center"><img src="fla-ppk.png" class="flavor-btn"><p class="flavor-label">ปาปริก้า</p></div>
+                    </div>
+                    <a href="https://line.me/R/ti/p/@dekauan.official" target="_blank" class="block w-full text-center py-4 rounded-2xl bg-[#E64A19] text-white font-bold shadow-lg hover:bg-orange-700 transition">สั่งซื้อเลย</a>
+                </div>
+            </div>
+
+            <!-- เกี๊ยวทอด (Hot Item) -->
+            <div class="menu-card relative fade-in">
+                <div class="bubble-tag bg-[#D4780B]">สินค้าขายดี</div>
+                <div class="aspect-video bg-[#FDF2E9] flex items-center justify-center p-6">
+                    <img src="pck-wonton.png" alt="เกี๊ยวทอด" class="h-full object-contain">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-3xl font-black mb-4">เกี๊ยวทอดกรอบ</h3>
+                    <p class="text-xs font-bold mb-3 text-gray-400 uppercase tracking-widest italic">เลือกใส่รสชาติ:</p>
+                    <div class="flex gap-4 flex-wrap mb-8">
+                        <div class="text-center"><img src="fla-ori.png" class="flavor-btn"><p class="flavor-label">ดั้งเดิม</p></div>
+                        <div class="text-center"><img src="fla-cheese.png" class="flavor-btn"><p class="flavor-label">ชีส</p></div>
+                        <div class="text-center"><img src="fla-truff.png" class="flavor-btn"><p class="flavor-label">ทรัฟเฟิล</p></div>
+                        <div class="text-center"><img src="fla-sc.png" class="flavor-btn"><p class="flavor-label">ซาวครีม</p></div>
+                    </div>
+                    <a href="https://line.me/R/ti/p/@dekauan.official" target="_blank" class="block w-full text-center py-4 rounded-2xl bg-[#E64A19] text-white font-bold shadow-lg hover:bg-orange-700 transition">สั่งซื้อเลย</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mb-16">
+            <button onclick="toggleAllMenu()" class="bg-[#3E2723] text-white px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:scale-105 transition">
+                ดูเมนูทั้งหมด <i id="menuIcon" class="fas fa-plus ml-2"></i>
+            </button>
+        </div>
+
+        <div id="allMenu" class="hidden grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+            <!-- เห็ดเข็มทอง -->
+            <div class="menu-card fade-in">
+                <div class="aspect-video bg-[#FDF2E9] flex items-center justify-center p-6">
+                    <img src="pck-enoki.png" class="h-full object-contain">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-black mb-4">เห็ดเข็มทองทอดกรอบ</h3>
+                    <div class="flex gap-4 flex-wrap mb-6">
+                        <div class="text-center"><img src="fla-ori.png" class="flavor-btn"><p class="flavor-label">ดั้งเดิม</p></div>
+                        <div class="text-center"><img src="fla-sw.png" class="flavor-btn"><p class="flavor-label">สาหร่าย</p></div>
+                        <div class="text-center"><img src="fla-ppk.png" class="flavor-btn"><p class="flavor-label">ปาปริก้า</p></div>
+                    </div>
+                    <a href="https://line.me/R/ti/p/@dekauan.official" target="_blank" class="block text-center py-3 rounded-xl bg-[#E64A19] text-white font-bold">สั่งซื้อเลย</a>
+                </div>
+            </div>
+            <!-- ปูอัด -->
+            <div class="menu-card fade-in">
+                <div class="aspect-video bg-[#FDF2E9] flex items-center justify-center p-6">
+                    <img src="pck-crab.png" class="h-full object-contain">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-black mb-4">ปูอัดทอดกรอบ</h3>
+                    <div class="flex gap-4 flex-wrap mb-6">
+                        <div class="text-center"><img src="fla-ori.png" class="flavor-btn"><p class="flavor-label">ดั้งเดิม</p></div>
+                        <div class="text-center"><img src="fla-sc.png" class="flavor-btn"><p class="flavor-label">ซาวครีม</p></div>
+                        <div class="text-center"><img src="fla-sw.png" class="flavor-btn"><p class="flavor-label">สาหร่าย</p></div>
+                    </div>
+                    <a href="https://line.me/R/ti/p/@dekauan.official" target="_blank" class="block text-center py-3 rounded-xl bg-[#E64A19] text-white font-bold">สั่งซื้อเลย</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updated Contact Section with Lemon8 and IG -->
+    <section id="contact" class="py-24 bg-[#FFF8F0] px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl font-black text-center mb-16 underline decoration-[#F2A900]">ช่องทางติดตามและสั่งซื้อ</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- LINE -->
+                <a href="https://line.me/R/ti/p/@dekauan.official" target="_blank" class="flex items-center gap-4 bg-white p-6 rounded-3xl shadow-md border-l-8 border-[#06C755] hover:scale-105 transition">
+                    <i class="fab fa-line text-4xl text-[#06C755]"></i>
+                    <div><p class="text-xs font-bold opacity-50 uppercase">LINE Official</p><p class="text-lg font-black">@dekauan.official</p></div>
+                </a>
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@dekauan.official" target="_blank" class="flex items-center gap-4 bg-white p-6 rounded-3xl shadow-md border-l-8 border-black hover:scale-105 transition">
+                    <i class="fab fa-tiktok text-4xl text-black"></i>
+                    <div><p class="text-xs font-bold opacity-50 uppercase">TikTok</p><p class="text-lg font-black">@dekauan.official</p></div>
+                </a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/dekauan.official" target="_blank" class="flex items-center gap-4 bg-white p-6 rounded-3xl shadow-md border-l-8 border-[#E4405F] hover:scale-105 transition">
+                    <i class="fab fa-instagram text-4xl text-[#E4405F]"></i>
+                    <div><p class="text-xs font-bold opacity-50 uppercase">Instagram</p><p class="text-lg font-black">@dekauan.official</p></div>
+                </a>
+                <!-- Facebook -->
+                <a href="#" target="_blank" class="flex items-center gap-4 bg-white p-6 rounded-3xl shadow-md border-l-8 border-[#1877F2] hover:scale-105 transition">
+                    <i class="fab fa-facebook text-4xl text-[#1877F2]"></i>
+                    <div><p class="text-xs font-bold opacity-50 uppercase">Facebook</p><p class="text-lg font-black">เด็กอ้วน DekAuan</p></div>
+                </a>
+                <!-- Lemon8 (Customized style) -->
+                <a href="#" target="_blank" class="flex items-center gap-4 bg-white p-6 rounded-3xl shadow-md border-l-8 border-[#F9D423] hover:scale-105 transition">
+                    <div class="bg-[#F9D423] w-10 h-10 rounded-xl flex items-center justify-center"><i class="fas fa-lemon text-white text-xl"></i></div>
+                    <div><p class="text-xs font-bold opacity-50 uppercase">Lemon8</p><p class="text-lg font-black">@dekauan.official</p></div>
+                </a>
+                <!-- Phone -->
+                <div class="flex items-center gap-4 bg-white p-6 rounded-3xl shadow-md border-l-8 border-[#E64A19]">
+                    <i class="fas fa-phone-alt text-3xl text-[#E64A19]"></i>
+                    <div><p class="text-xs font-bold opacity-50 uppercase">เบอร์โทรศัพท์</p><p class="text-lg font-black">0XX-XXX-XXXX</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#3E2723] text-white py-16 text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-3xl font-black mb-6 brand-title" style="font-size: 1.8rem;">เด็กอ้วน</p>
+            <div class="flex justify-center gap-6 mb-8 text-2xl">
+                <a href="#" class="hover:text-[#F2A900]"><i class="fab fa-line"></i></a>
+                <a href="#" class="hover:text-[#F2A900]"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="hover:text-[#F2A900]"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-[#F2A900]"><i class="fas fa-lemon"></i></a>
+            </div>
+            <p class="opacity-40 text-sm italic">© 2024 DEKAUAN PREMIUM SNACKS. ใช้น้ำมันดอกทานตะวัน 100% เพื่อสุขภาพดีที่คุณวางใจได้</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        function toggleAllMenu() {
+            const menu = document.getElementById('allMenu');
+            const icon = document.getElementById('menuIcon');
+            if(menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.className = 'fas fa-minus ml-2';
+                setTimeout(() => { menu.scrollIntoView({ behavior: 'smooth' }); }, 100);
+            } else {
+                menu.classList.add('hidden');
+                icon.className = 'fas fa-plus ml-2';
+            }
+        }
+    </script>
+</body>
+</html>
